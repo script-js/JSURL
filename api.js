@@ -6,6 +6,6 @@ function getLink(url,keyword) {
   var jsurlgenerator = document.createElement("iframe");
   jsurlgenerator.style = "width:0px;border:none;height:0px;";
   jsurlgenerator.src = "https://jsurl.pages.dev/add?key=" + keyword + "&url=" + url;
-  document.appendChild(jsurlgenerator);
-  return "https://jsurl.pages.dev/" + keyword
+  document.documentElement.appendChild(jsurlgenerator);
+  return "https://jsurl.pages.dev/" + keyword;
 }
