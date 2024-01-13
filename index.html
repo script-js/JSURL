@@ -27,11 +27,13 @@
   const dbRef = ref(db);
 
   var urlId = location.href.replace("https://jsurl.pages.dev/","")
-  if (urlId && urlId != "https://jsurl.pages.dev/") {
+  if (urlId) {
   get(child(dbRef, "/" + urlId)).then((snapshot) => {
   if (snapshot.exists()) {
     var gdata = snapshot.val();
     location.replace(gdata.url)
+  } else {
+    document.body.innerHTML = "<h1>404</h1>Link not found";
   }
 }).catch((error) => {
   alert(error);
