@@ -26,10 +26,6 @@
   const db = getDatabase();
   const dbRef = ref(db);
 
-  window.dbRef = dbRef;
-  window.db = db;
-  window.get = get;
-  window.child = child;
   var urlId = new URLSearchParams(window.location.search)
   if (urlId) {
   get(child(dbRef, urlId)).then((snapshot) => {
