@@ -31,7 +31,7 @@
   if (urlId) {
   get(child(dbRef, "/" + urlId)).then((snapshot) => {
   if (snapshot.exists()) {
-    alert("URL Shortening Error:  Suffix already exists.")
+    alert("URL Shortening Error: Suffix already exists.")
   } else {
     set(ref(db,urlId),{url:id1});
   }
