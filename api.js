@@ -1,5 +1,5 @@
 function getLinkWithPopup(url,keyword) {
-  var popup1 = window.open("https://jsurl.pages.dev/add?key=" + keyword + "&url=" + url;
+  var popup1 = window.open("https://jsurl.pages.dev/add?key=" + keyword + "&url=" + url);
 }
 
 function getLink(url,keyword) {
