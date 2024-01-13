@@ -26,7 +26,7 @@
   const db = getDatabase();
   const dbRef = ref(db);
 
-  var urlId = new URLSearchParams(window.location.search)
+  var urlId = location.href.replace("https://jsurl.pages.dev/","")
   if (urlId) {
   get(child(dbRef, "/" + urlId)).then((snapshot) => {
   if (snapshot.exists()) {
