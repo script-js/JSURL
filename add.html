@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    
+  </head>
+  <body>
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getDatabase, ref, get, child } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDtRT41LIMJqmcSB5_A5G9FWFtuvMSHyjQ",
+    authDomain: "jsurl-512e9.firebaseapp.com",
+    projectId: "jsurl-512e9",
+    storageBucket: "jsurl-512e9.appspot.com",
+    messagingSenderId: "371834717525",
+    appId: "1:371834717525:web:58d2c0df75254f3b38dbdc"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase();
+  const dbRef = ref(db);
+
+  var urlId = new URLSearchParams(window.location.search).get("key")
+  var id1 = new URLSearchParams(window.location.search).get("url")
+  if (urlId) {
+  set(ref(db,urlId),{url:id1})
+  }
+  </script>
+  </body>
+</html>
