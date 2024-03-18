@@ -33,7 +33,7 @@
   if (snapshot.exists()) {
     alert("URL Shortening Error: Suffix already exists.")
   } else {
-    set(ref(db,urlId),{url:id1});
+    set(ref(db,"/suffix/" + urlId),{url:id1});
   }
 })
   }
