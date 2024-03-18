@@ -25,7 +25,7 @@
 
   var urlId = location.href.replace("https://jsurl.pages.dev/","")
   if (urlId) {
-  get(child(dbRef, "/" + urlId)).then((snapshot) => {
+  get(child(dbRef, "/suffix/" + urlId)).then((snapshot) => {
   if (snapshot.exists()) {
     var gdata = snapshot.val();
     location.replace(gdata.url)
