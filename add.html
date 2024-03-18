@@ -29,7 +29,7 @@
   var urlId = new URLSearchParams(window.location.search).get("key")
   var id1 = new URLSearchParams(window.location.search).get("url")
   if (urlId) {
-  get(child(dbRef, "/" + urlId)).then((snapshot) => {
+  get(child(dbRef, "/suffix/" + urlId)).then((snapshot) => {
   if (snapshot.exists()) {
     alert("URL Shortening Error: Suffix already exists.")
   } else {
